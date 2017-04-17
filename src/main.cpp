@@ -11,8 +11,8 @@
 #include <opencv/cv.hpp>
 #include <opencv2/highgui.hpp>
 
-#include "cmdline.h"
-#include "util.h"
+#include "../include/cmdline.h"
+#include "../include/util.h"
 
 using namespace std;
 namespace fs = boost::filesystem;

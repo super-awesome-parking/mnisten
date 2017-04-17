@@ -45,8 +45,15 @@ then create:
 |--without-shuffle,-w|(none)|disable data shuffling|no|false|
 
 #prerequisites
-- OpenCV
-- boost (boost/filesystem)
+Install instructions for macOS:
+### OpenCV
+
+    brew tap homebrew/science
+    brew install opencv3 --with-contrib
+
+### boost
+
+    brew install boost
 
 #build
 ```
