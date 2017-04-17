@@ -125,7 +125,7 @@ void exec(const string& dir, const string& output_prefix, int num_tests, int w, 
     BOOST_FOREACH(const fs::path& p, std::make_pair(fs::directory_iterator(path), fs::directory_iterator())) {
         if (fs::is_directory(p)) {
             int n = read_images(p, map[p.string()], images, w, h);
-            cout << (int)map[p.string()] << ":" << p.stem().string() << " " << n << "images" << endl;
+            cout << (int)map[p.string()] << ":" << p.stem().string() << " " << n << " images" << endl;
         }
     }
 
@@ -137,7 +137,7 @@ void exec(const string& dir, const string& output_prefix, int num_tests, int w, 
     if ((int)images.size() <= num_tests)
         throw runtime_error("total images are less than num_tests");
 
-    cout << "total " << images.size() << "images found." << endl;
+    cout << "total " << images.size() << " images found." << endl;
 
     string train_img   = add_prefix(output_prefix, "train_images.idx3");
     string train_label = add_prefix(output_prefix, "train_labels.idx1");
