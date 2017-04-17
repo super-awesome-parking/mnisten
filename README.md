@@ -5,26 +5,26 @@ mnisten is a library to convert image files to [idx format](http://yann.lecun.co
 - random-shuffling
 - generate train/test file
 
-#example
 
-image files:
-```
-.\
-|--foo
-|   |--a.bmp
-|   |--b.bmp
-|   +--1.txt
-+--bar
-    |--c.bmp
-    |--d.bmp
-    +--buzz
-         +--e.bmp
-```
-- a and b.bmp => label 1
-- c and d.bmp => label 0
-- 1.txt and e.bmp => ignored
+# Prerequisites
+Install instructions for macOS:
+### OpenCV
 
-#usage
+    brew tap homebrew/science
+    brew install opencv3 --with-contrib
+
+### boost
+
+    brew install boost
+
+# Build
+```
+make
+```
+or build vc/mnisten.sln
+
+
+# Usage
 
 ```
 mnisten -d .\ -o prefix -s 32x24
@@ -44,19 +44,22 @@ then create:
 |--size,-s|WxH(string)|size of each image data|no|32x32|
 |--without-shuffle,-w|(none)|disable data shuffling|no|false|
 
-#prerequisites
-Install instructions for macOS:
-### OpenCV
 
-    brew tap homebrew/science
-    brew install opencv3 --with-contrib
+# Example
 
-### boost
-
-    brew install boost
-
-#build
+image files:
 ```
-make
+.\
+|--foo
+|   |--a.bmp
+|   |--b.bmp
+|   +--1.txt
++--bar
+    |--c.bmp
+    |--d.bmp
+    +--buzz
+         +--e.bmp
 ```
-or build vc/mnisten.sln
+- a and b.bmp => label 1
+- c and d.bmp => label 0
+- 1.txt and e.bmp => ignored
