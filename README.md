@@ -29,14 +29,17 @@ or build vc/mnisten.sln
 
 ```
 ln -s $SAP_SIGN_DATASET images
-mnisten -d images -o prefix -s 32x24
+./mnisten -d images -o prefix -s 28x28 -n 50
 ```
 
-then create:
-- prefix_train_images.idx3
-- prefix_train_labels.idx1
-- label.txt
-    - log directory-name => label-id
+The following files should've been created:
+
+- `prefix_train_images.idx3`
+- `prefix_train_labels.idx1`
+- `label.txt`
+  - log directory-name => label-id
+
+## Arguments
 
 |option|parameters|meaning|required|default|
 |---|---|---|---|---|
