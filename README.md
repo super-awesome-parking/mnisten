@@ -12,6 +12,7 @@ Install instructions for macOS:
 
     brew tap homebrew/science
     brew install opencv3 --with-contrib
+    export PKG_CONFIG_PATH="/usr/local/opt/opencv3/lib/pkgconfig"
 
 ### boost
 
