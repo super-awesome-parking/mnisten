@@ -1,3 +1,8 @@
+images
+label.txt
+prefix_train_images.idx3
+prefix_train_labels.idx1
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

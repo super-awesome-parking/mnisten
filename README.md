@@ -27,7 +27,8 @@ or build vc/mnisten.sln
 # Usage
 
 ```
-mnisten -d .\ -o prefix -s 32x24
+ln -s $SAP_SIGN_DATASET images
+mnisten -d images -o prefix -s 32x24
 ```
 
 then create:
